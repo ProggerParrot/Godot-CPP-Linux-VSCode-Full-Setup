@@ -1,0 +1,52 @@
+ 
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Player GDNative",
+            "type": "shell",
+            "command": "sh",
+            "args": ["build_all.sh"],
+            "options": {
+                "cwd": "${workspaceRoot}/native_librarys/example_player"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+
+        {
+            "label": "Rebuild && Replace Engine",
+            "type": "shell",
+            "command": "cp",
+            "args": ["*.*", "../../.."],
+            "options": {
+                "cwd": "${workspaceRoot}/godot/bin"
+            },
+            "problemMatcher": [],
+            "dependsOn": "Rebuild Engine",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }   
+        },
+
+        {
+            "label": "Rebuild Engine",
+            "type": "shell",
+            "command": "scons",
+            "args": ["-j8"],
+            "options": {
+                "cwd": "${workspaceRoot}/godot"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }   
+        }
+    
+    ]
+}

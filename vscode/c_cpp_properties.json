@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/godot-cpp/include/**",
+                "${workspaceFolder}/godot-cpp/include/gen**",
+                "${workspaceFolder}/godot-cpp/include/core**",
+                "${workspaceFolder}/godot/modules/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "clang-x64",
+            "compileCommands": "${workspaceFolder}/godot/compile_commands.json"
+            
+        }
+    ],
+    "version": 4
+}
+
