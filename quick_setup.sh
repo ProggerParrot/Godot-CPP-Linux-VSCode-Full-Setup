@@ -19,7 +19,7 @@ if [ ! -d "$SRCPATH" ]; then
 fi
 
 mv example_player/ "$SRCPATH/native_librarys"
-mv .vscode "$SRCPATH"
+mv vscode/ "$SRCPATH/.vscode/" 
 mv source.code-workspace "$SRCPATH"
 
 
