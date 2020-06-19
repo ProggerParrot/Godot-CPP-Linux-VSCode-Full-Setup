@@ -1,7 +1,5 @@
 #include "calculatorNode.h"
 
-using namespace godot
-
 CalculatorNode::CalculatorNode(){}
 
 //Bind all your methods used in this class
