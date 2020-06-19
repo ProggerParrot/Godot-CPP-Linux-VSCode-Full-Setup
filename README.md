@@ -6,6 +6,8 @@ Just download and run "sh quick-setup.sh". It is recommended to start the script
 You can find a detailed introduction on our YouTube-Channel. 
 
 https://www.youtube.com/c/proggerparrot
-(comming soon) - currently just run -> sh quick-setup.sh
+(comming soon) - 
+
+currently just run -> sh quick-setup.sh
 
 Hope we could save you some time with this setup :D
