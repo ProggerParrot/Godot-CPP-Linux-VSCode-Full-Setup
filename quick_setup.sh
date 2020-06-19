@@ -65,8 +65,8 @@ if [ -d ../calculator/ ]; then
 fi
 
 ##Build the example Native-libs
-cd native_librarys/example_player
-./build_all.sh
+cd native_librarys/example_player/
+sh build_all.sh
 cd ../..
 
 ####END DEMO STUFF
