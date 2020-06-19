@@ -1,0 +1,30 @@
+{
+	"files.exclude": {
+		"**/*.js": true
+	},
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/*.cpp": false,
+			"**/*.h": false,
+			"**/*.o": true,
+			"**/*.xml": true,
+			"**/*.svg": true,
+			"**/*.png": true,
+			"**/*.md": true,
+			"**/*.a": true,
+			"**/*.os": true,
+			"**/SConstruct": true,
+			"**/__pycache__": true,
+			"**/.**": true,
+			"**/SCsub": true,
+			"**/Makefile": true,
+			"**/bin": true,
+			
+		},
+	}
+}

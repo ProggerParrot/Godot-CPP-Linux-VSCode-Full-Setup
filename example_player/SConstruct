@@ -1,0 +1,69 @@
+import os, subprocess, platform, sys
+
+libs_path = [
+            '../../godot-cpp/bin'
+            ]
+
+include_path =  [
+                '../../godot-cpp/godot_headers',
+                '../../godot-cpp/include',
+                '../../godot-cpp/include/core',
+                '../../godot-cpp/include/gen'
+                ]
+
+sources = Glob('*.cpp')
+
+
+env = Environment(CPPPATH = include_path, INCLUDE = include_path, LIBPATH = libs_path)
+
+opts = Variables([],ARGUMENTS)
+opts.Add(EnumVariable
+            (
+                'target','Compilation target', 'release', 
+                allowed_values=('debug','release'),
+                ignorecase = 2
+            )                     
+        )
+opts.Add(EnumVariable
+            (
+                'bits','Compilation Architecture', '64', 
+                allowed_values=('32','64'),
+                ignorecase = 2
+            )                     
+        )
+
+opts.Update(env)
+
+
+
+env['CXX'] = 'clang++'
+env.Append(CCFLAGS=['-fPIC','-std=c++14'])
+env.Append(LINKFLAGS=['-shared'])
+
+if env['target'] == 'debug':
+    env.Append(CCFLAGS=['-Og'])
+elif env['target'] == 'release':
+    env.Append(CCFLAGS=['-O3'])
+
+if env['bits'] == '64':
+    env.Append(CCFLAGS=['-m64'])
+    env.Append(LINKFLAGS=['-m64'])
+elif env['bits'] == '32':
+    env.Append(CCFLAGS=['-m32'])
+    env.Append(LINKFLAGS=['-m32'])
+    
+
+
+
+
+lib = 'libgodot-cpp.linux.{}.{}'.format( env['target'], env['bits'] + '.a')
+
+name = str(os.path.basename(os.path.abspath(os.getcwd())))
+
+path = 'libs/{}/_{}-{}_x{}'.format(env['target'], name, env['target'],env['bits'])
+
+
+env.SharedLibrary(target=path, LIBS = lib, source=sources)
+
+
+ 
