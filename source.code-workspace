@@ -1,7 +1,4 @@
 {
-	"files.exclude": {
-		"**/*.js": true
-	},
 	"folders": [
 		{
 			"path": "."
@@ -16,11 +13,13 @@
 			"**/*.svg": true,
 			"**/*.png": true,
 			"**/*.md": true,
+			"**/*.js": true,
 			"**/*.a": true,
 			"**/*.os": true,
 			"**/SConstruct": true,
 			"**/__pycache__": true,
-			"**/.**": true,
+			"**/.git*": true,
+			"**/*.yml": true,
 			"**/SCsub": true,
 			"**/Makefile": true,
 			"**/bin": true,
