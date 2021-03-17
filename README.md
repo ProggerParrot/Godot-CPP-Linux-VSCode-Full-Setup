@@ -5,8 +5,9 @@ Just download and run "sh quick-setup.sh". It is recommended to start the script
 
 You can find a detailed introduction on our YouTube-Channel. 
 
-https://www.youtube.com/c/proggerparrot
-(comming soon) - 
+Summery: https://youtu.be/X1bKjzdZmTA
+Godot Bindings: https://www.youtube.com/watch?v=Ye23Fj94QzQ&list=PLZ2NyOcFnfQOko5ZysZeGkH3bfw2UtbOK
+(needed for CMake)
 
 currently just run -> sh quick-setup.sh
 
