@@ -28,7 +28,7 @@ mv source.code-workspace "$SRCPATH"
 
 cd "$SRCPATH"
 
-git clone --recursive https://github.com/GodotNativeTools/godot-cpp -b 3.2
+git clone --recursive https://github.com/godotengine/godot-cpp -b 3.2
 git clone --recursive https://github.com/godotengine/godot -b 3.2
 
 
